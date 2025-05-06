@@ -117,7 +117,8 @@ Below are the available sub classes:
 +-------------------+----------+
 |* `Misc`_          | other    |
 +-------------------+----------+
-
+|* `BlackOps6`_     | other    |
++-------------------+----------+
 
 
 For a detailed description, ``__doc__`` (docstring) of each sub class can be called as shown below:
@@ -134,6 +135,19 @@ For a detailed description, ``__doc__`` (docstring) of each sub class can be cal
 
     # print out the docstring
     print(api.ColdWar.__doc__)
+
+.. _`ColdWar`:
+
+``BlackOps6``:
+
+.. code-block:: python
+
+    from cod_api import API
+
+    api = API()
+
+    # print out the docstring
+    print(api.BlackOps6.__doc__)
 
 .. _`ModernWarfare`:
 

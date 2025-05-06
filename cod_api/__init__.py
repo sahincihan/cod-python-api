@@ -33,6 +33,7 @@ class games(enum.Enum):
     Vanguard = 'vg'
     Warzone = 'wz'
     Warzone2 = 'wz2'
+    BlackOps6 = 'bo6'
 
 
 class friendActions(enum.Enum):
@@ -65,6 +66,8 @@ class API:
         self.Shop = self.__SHOP()
         self.Me = self.__USER()
         self.Misc = self.__ALT()
+
+        self.BlackOps6 = self.__BO6()
 
     async def loginAsync(self, sso_token: str) -> None:
         await API._Common.loginAsync(sso_token)
@@ -538,6 +541,25 @@ class API:
         @property
         def _game(self) -> str:
             return "mw2"
+
+        @property
+        def _type(self) -> str:
+            return "mp"
+
+  # BO6
+
+    class __BO6(__GameDataCommons):
+        """
+        BlackOps 6 class: A class to get players BlackOps6 stats, BlackOps6 combat history, a player's BlackOps6 season loot, BlackOps6 map list and specific BlackOps6 match details
+            classCategory: game
+            gameId/gameTitle: bo6
+            gameType: mp
+
+        """
+
+        @property
+        def _game(self) -> str:
+            return "bo6"
 
         @property
         def _type(self) -> str:
